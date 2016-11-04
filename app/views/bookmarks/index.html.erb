@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Link</th>
       <th>Mark type</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @bookmarks.each do |bookmark| %>
       <tr>
+        <td><%= image_tag bookmark.preview_image_url(:thumbnail) %>
         <td><%= bookmark.name %></td>
         <td><%= bookmark.link %></td>
         <td><%= bookmark.mark_type.name %></td>

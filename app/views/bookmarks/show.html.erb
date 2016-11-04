@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+
+<p>
+  <%= image_tag @bookmark.preview_image_url(:thumbnail) %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @bookmark.name %>
