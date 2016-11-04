@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Link</th>
       <th>Mark type</th>
+      <th>Show PDF</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,8 @@
         <td><%= bookmark.name %></td>
         <td><%= bookmark.link %></td>
         <td><%= bookmark.mark_type.name %></td>
+        <td><%= link_to 'Show PDF', bookmark.preview_image_url %></td>
+
         <td><%= link_to 'Show', bookmark %></td>
         <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
         <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
