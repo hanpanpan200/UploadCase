@@ -3,7 +3,7 @@
 
 
 <p>
-  <%= image_tag @bookmark.preview_image_url(:thumbnail) %>
+  <%= image_tag @bookmark.attachment_url(:thumbnail) %>
 </p>
 
 <p>
@@ -12,18 +12,8 @@
 </p>
 
 <p>
-  <strong>Link:</strong>
-  <%= @bookmark.link %>
-</p>
-
-<p>
-  <strong>Mark type:</strong>
-  <%= @bookmark.mark_type.name %>
-</p>
-
-<p>
-  <strong>Preview Image</strong>
-  <%= link_to 'Download Preview Image', @bookmark.preview_image_url %>
+  <strong>Attachment</strong>
+  <%= link_to 'Download attachment', @bookmark.attachment_url %>
 </p>
 
 <%= link_to 'Edit', edit_bookmark_path(@bookmark) %> |

@@ -1,2 +1,0 @@
-class MarkType < ApplicationRecord
-end

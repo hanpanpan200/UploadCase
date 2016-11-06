@@ -34,10 +34,10 @@ class PreviewImageUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :thumbnail do
     process :thumbnail_pdf
-    process :resize_to_fit => [100, 50]
-    process :convert => :jpg
+    process :resize_to_fit => [300, 200]
+    process :convert => :png
     def full_filename (for_file = model.source.file)
-      super.chomp(File.extname(super)) + '.jpg'
+      for_file + '.png'
     end
   end
 
